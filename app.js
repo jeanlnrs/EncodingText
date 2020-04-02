@@ -1,32 +1,30 @@
 document.write("<h1>Hola Mundo</h1>");
 
 function PromptDemo() {
-    //Ingresamos un mensaje a mostrar
+    //Ingresamos los mensajes a mostrar
     var texto = prompt("¿Cuál es el texto que deseas encriptar?", "");
-    var codigo = prompt("Escriba el numero del lenguaje al que desea encriptar su texto \n 0= Base64  1= ROT13  2= Hexadecimal  3= Binario", "");
+    var codigo = parseInt(prompt("Escriba el numero del lenguaje al que desea encriptar su texto \n 0= Base64  1= ROT13  2= Hexadecimal  3= Binario", ""),0);
     //Detectamos si el usuario ingreso un valor
     if (texto != null && codigo != null) {
-        var encoding = 3;
-        var texto = "jean"
-        switch (encoding) {
+        switch (codigo) {
             case 0:
                 var encodedString = btoa(texto);
-                console.log(encodedString);
+                alert("El texto " + texto + " en BASE64 es '" + encodedString + "'");
                 break;
 
             case 1:
                 var encodedString = texto.replace(/[a-zA-Z]/g, function (c) { return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26); });
-                console.log(encodedString);
+                alert("El texto " + texto + " en ROT13 es '" + encodedString + "'");
                 break;
 
             case 2:
                 var encodedString = ascii_to_hexa(texto);
-                console.log(encodedString);
+                alert("El texto " + texto + " en HEXADECIMAL es '" + encodedString + "'");
                 break;
 
             case 3:
                 var encodedString = textToBin(texto);
-                console.log(encodedString);
+                alert("El texto " + texto + " en BINARIO es '" + encodedString + "'");
                 break;
 
             default:
@@ -38,8 +36,6 @@ function PromptDemo() {
         alert("No has ingresado un valor");
     }
 }
-
-
 
 function ascii_to_hexa(str) {
     var arr1 = [];
