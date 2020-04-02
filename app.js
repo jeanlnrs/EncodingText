@@ -5,7 +5,7 @@ function CuadroDeTexto() {
     var texto = prompt("¿Cuál es el texto que deseas encriptar?", "");
     //Detectamos si el usuario ingreso un valor
     if (texto != "") {
-    var codigo = parseInt(prompt("Escriba el numero del lenguaje al que desea encriptar su texto \n 1= Base64  2= ROT13  3= Hexadecimal  4= Binario", ""),0)+1;
+    var codigo = parseInt(prompt("Escriba el numero del lenguaje al que desea encriptar su texto \n 1= Base64  2= ROT13  3= Hexadecimal  4= Binario", ""),0);
         switch (codigo) {
             case 1:
                 var encodedString = btoa(texto);
@@ -34,7 +34,7 @@ function CuadroDeTexto() {
     }
     //Detectamos si el usuario NO ingreso un valor
     else {
-        alert("No has ingresado un valor");
+        alert("Se te ha olvidado ingresar el texto amig@, intentalo nuevamente");
     }
 }
 
