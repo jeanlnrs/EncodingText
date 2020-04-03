@@ -1,10 +1,8 @@
-document.write("<h1>Hola Mundo</h1>");
-
 function CuadroDeTexto() {
     //Ingresamos los mensajes a mostrar
     var texto = prompt("¿Cuál es el texto que deseas encriptar?", "");
     //Detectamos si el usuario ingreso un valor
-    if (texto != "") {
+    if (texto != "" && texto != null) {
     var codigo = parseInt(prompt("Escriba el numero del lenguaje al que desea encriptar su texto \n 1= Base64  2= ROT13  3= Hexadecimal  4= Binario", ""),0);
         switch (codigo) {
             case 1:
