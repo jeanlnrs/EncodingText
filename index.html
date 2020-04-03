@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Diagnostica</title>
     <style type="text/css">
+        /* Se agrega estilo para centrar el div principal */
         .principal {
             height: 150px;
             display: flex;
@@ -13,10 +14,12 @@
             align-items: center;
         }
 
+        /* Se agrega estilo para centrar el div segundario */
         .segundario {
             width: 120px;
         }
 
+        /* Se agrega estilo para el boton */
         input[type=button] {
             background-color: #555555;
             border-color: dimgrey;
@@ -28,11 +31,13 @@
             border-radius: 10px;
         }
 
+        /* Se agrega animacion de movimiento al boton */
         input[type=button]:hover {
             background-color: #40b4db;
             color: black;
         }
 
+        /* Se cambia el fondo del cuerpo de la web a negro */
         body {
             background-color: #555555;
         }
@@ -44,6 +49,7 @@
     <div class="principal">
         <div class="segundario">
             <form>
+                <!--Se agrega input que al ser seleccionado llama a una funcion en js-->
                 <input type="button" id="Formulario" onclick="CuadroDeTexto()" value="Click para encriptar un texto" />
             </form>
         </div>
